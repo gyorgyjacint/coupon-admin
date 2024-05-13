@@ -1,3 +1,3 @@
-# coupon-master
+# coupon-admin
 
 Az alkalmazást megrendelő ügyfél appja.
