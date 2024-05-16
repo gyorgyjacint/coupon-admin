@@ -2,6 +2,7 @@
 
 package-lock.json
 .idea/*
+android/*
 
 # dependencies
 node_modules/
