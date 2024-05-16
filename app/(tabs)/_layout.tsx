@@ -29,10 +29,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: "Read QR",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/aboutModal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -48,9 +48,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="notifications"
         options={{
-          title: 'Tab Two',
+          title: 'Check notifications',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="push"
+        options={{
+          title: 'Push notification',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
