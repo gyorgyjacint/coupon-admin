@@ -1,5 +1,40 @@
-import { StyleSheet } from 'react-native';
+import { Pressable, StyleSheet, TouchableOpacity, ToastAndroid } from 'react-native';
 import { Text, View } from '@/components/Themed';
+import { useState } from 'react';
+import { Button } from '@rneui/themed';
+import { CameraView, useCameraPermissions } from 'expo-camera';
+import { BarCodeScanningResult } from 'expo-camera/build/legacy/Camera.types';
+
+const Camera = (setReadQR : Function, setQrData : Function,) => {
+  function onBarcodeScanned(result : BarCodeScanningResult){
+    if (result) {
+      setQrData(result);
+      ToastAndroid.show(result.data, 3);
+    } else {
+      ToastAndroid.show("Unrecognized", 3);
+    }
+    setReadQR(false);
+  }
+
+  return (
+    <View style={styles.container}>
+      <CameraView
+        style={styles.camera}
+        autofocus='on'
+        mode='picture'
+        onBarcodeScanned={onBarcodeScanned}
+        barcodeScannerSettings={{
+          barcodeTypes: ["qr"]
+        }}>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.button} onPress={() => setReadQR(false)}>
+              <Text style={styles.text}>Exit Camera</Text>
+            </TouchableOpacity>
+          </View>
+      </CameraView>
+    </View>
+  );
+}
 
 export default function IndexScreen() {
   return (
