@@ -1,5 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a name="readme-top"></a>
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -7,8 +9,6 @@
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
 -->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -19,13 +19,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
-
-
-
-
 <div align="center">
-
 
   <h3 align="center">Coupon-master</h3>
 
@@ -36,9 +30,7 @@
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS 
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -63,10 +55,9 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
-
+-->
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 The goal of this project, is to provide two mobile applications for an imaginary customer who has an imaginary bakery.
@@ -79,25 +70,21 @@ The owner can send out push notifications about the available discounts, which c
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
 
-* [React-Native](https://reactnative.dev/)
-* [Expo](https://expo.dev/)
-* [ASP.NET](asp.net )
-
+- [React-Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [ASP.NET](asp.net)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
 
-* npm
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -111,7 +98,6 @@ The owner can send out push notifications about the available discounts, which c
 2. Install Android SDK
    <br>
    [SDK](https://developer.android.com/studio)
-   
 3. Install NPM packages
    ```
    npm install
@@ -124,11 +110,11 @@ The owner can send out push notifications about the available discounts, which c
    npm start
    ```
 6. Read the QR code from Expo Go on your mobile device
- 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] Add Readme
@@ -145,4 +131,3 @@ The owner can send out push notifications about the available discounts, which c
 [React-url]: https://reactnative.dev/
 [Expo]: https://i0.wp.com/shungoblog.com/wp-content/uploads/2023/04/blog.png?fit=1280%2C720&ssl=1
 [Expo-url]: https://expo.dev/
-
