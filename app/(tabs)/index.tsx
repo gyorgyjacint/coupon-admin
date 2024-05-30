@@ -37,9 +37,41 @@ const Camera = (setReadQR : Function, setQrData : Function,) => {
 }
 
 export default function IndexScreen() {
+  const [readQR, setReadQR] = useState<boolean>(false);
+  const [qrData, setQrData] = useState<BarCodeScanningResult | null>(null);
+  const [permission, requestPermission] = useCameraPermissions();
+
+  requestPermission();
+
+  if (!permission) {
+    // Camera permissions are still loading.
+    return <View />;
+  }
+
+  if (!permission.granted) {
+    // Camera permissions are not granted yet.
+    return (
+      <View>
+        <Text>
+          Go to Settings to allow use of Camera
+        </Text>
+      </View>
+    )
+  }
+
+  function toggleCameraActivation(){
+    setReadQR((status) => !status);
+  }
+
+  if (readQR){
+    return Camera(setReadQR, setQrData);
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Read QR</Text>
+      <Pressable>
+        <Button onPress={toggleCameraActivation}>Read QR</Button>
+      </Pressable>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
   );
@@ -60,7 +92,7 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
-camera: {
+  camera: {
     flex: 1,
     width: '100%',
     height: '100%'
